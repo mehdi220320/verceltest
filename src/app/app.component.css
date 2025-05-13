@@ -1,0 +1,42 @@
+
+  .vipa-title {
+    font-family: 'Arial', sans-serif;
+    color: #d4af37; /* Gold color */
+    text-shadow: 
+      2px 2px 0 #000,
+      -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000; /* Black outline */
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #8B0000, #4B0082); /* Dark red to indigo */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 15px;
+    border: 3px solid #d4af37;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .vipa-title::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(212,175,55,0.2) 0%, rgba(0,0,0,0) 70%);
+    transform: rotate(30deg);
+    animation: shine 3s infinite;
+  }
+
+  @keyframes shine {
+    0% { transform: rotate(30deg) translate(-30%, -30%); }
+    100% { transform: rotate(30deg) translate(30%, 30%); }
+  }
